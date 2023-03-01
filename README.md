@@ -6,7 +6,7 @@ Variable font animation of historical data and predictions for Arctic Sea Ice Ex
 
 Step By Step:
 1. [Install Climate Crisis Font](https://kampanjat.hs.fi/climatefont/index.html)
-2. Install Coldtype (link) Python library - see tutorial (link)
+2. [Install Coldtype Python library](https://coldtype.goodhertz.com/install.html) (contains video tutorial)
 3. Navigate to appropriate directory and then`source venv/bin/activate` (“the magical incantation” for xxx)
 4. `coldtype climate-crisis` to launch to viewer
 5. Press spacebar to play and pause
