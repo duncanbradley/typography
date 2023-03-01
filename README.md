@@ -3,7 +3,7 @@
 Variable font animation of historical data and predictions for Arctic Sea Ice Extent (1979-2050):
 
 
-<img src="https://github.com/duncanbradley/typography/blob/main/ice.gif" alt="Animated gif, with the words Artic Sea Ice and a year, starting at 1979 and increasing by 1 until 2050. The typeface starts with a very heavy weight but the thickness of the characters shrinks over time. By 2050, the text has the fragile appearance of thawing ice." width="300" />
+<img src="https://github.com/duncanbradley/typography/blob/main/ice.gif" alt="Animated gif, with the words Artic Sea Ice and a year, starting at 1979 and increasing by 1 until 2050. The typeface starts with a very heavy weight but the thickness of the characters shrinks over time. By 2050, the text has the fragile appearance of thawing ice." width="500" />
 
 Step By Step:
 1. [Install Climate Crisis Font](https://kampanjat.hs.fi/climatefont/index.html)
