@@ -5,7 +5,7 @@ climatecrisis = Font.Cacheable("ClimateCrisis-Variable.ttf")
 poppins = Font.Cacheable("Poppins-Medium.ttf")
 
 # define the animation
-@animation(timeline=215, composites=1, bg =0.1, render_bg=1)
+@animation(timeline=215, composites=1, bg=hsl(0.61), render_bg=1)
 def ice(f):
     r = f.a.r
     yr = round(f.i/3) + 1979
@@ -21,7 +21,7 @@ def ice(f):
                     poppins, 15, leading = 60)).f(0.9).track(-50, v=1).xalign(r.inset(60), "E")
 
     # create text for (A)rctic (S)ea (I)ce
-    ASI = (StSt("Arctic\nSea Ice",
+    ASI = (StSt("Arctic\nSea   Ice",
             climatecrisis, 150, wght=1, slnt=1, leading=-200,
             year = f.e("qeio", 0.5))
             .f(1)
@@ -29,14 +29,14 @@ def ice(f):
             .reversePens()
             .distribute(v=1)
             .track(-125, v=1)
-            .xalign(r.inset(140+(f.i/8)), "W")
+            .xalign(r.inset(110+(f.i/8)), "W")
             )
 
     # create (T)ransparent version of ASI text
-    ASIT = (StSt("Arctic\nSea Ice",
+    ASIT = (StSt("Arctic\nSea   Ice",
             climatecrisis, 150, wght=1, slnt=1, leading=40,
             year = 0)
-            .f(0.15) # opacity = 15%
+            .f(hsl(0.59)) # opacity = 15%
             .align(r)
             )
 
@@ -45,20 +45,33 @@ def ice(f):
             climatecrisis, 200,
             tu=-10, r=1, ro=1, wdth=0.65,
             year = f.e("linear", 0.5))
+            .f(1)
+            #.track(-120, v=0)
+            #.xalign(r.inset(110+(f.i/8)), "W")
+            # 
+            #.xalign(r.inset(10), "W")
+            .translate(111, 286)
+            )
+    
+    YEART = (StSt(str(round(f.e("qeio", 0.5)*71+1979)), 
+            climatecrisis, 200,
+            tu=-10, r=1, ro=1, wdth=0.5,
+            year = 0)
             .align(r)
-            .f(1))
+            .f(hsl(0.59)))
 
     # combine everything
     return (PS([
         ASIT,
-        YEAR,
+        YEART
         ])
         .reversePens()
         .distribute(v=1)
         .track(-150, v=1)
         .align(r)
-        .xalign(r.inset(140), "W")
+        .xalign(r.inset(110), "W")
         .append(ASI)
+        .append(YEAR)
         .insert(1, border)
         .insert(1, caption))
 
