@@ -11,5 +11,5 @@ Step By Step:
 3. Navigate to appropriate directory and then `source venv/bin/activate` (the “magical incantation” for activating virtual environment)
 4. `coldtype climate-crisis` to launch to viewer
 5. Press spacebar to play and pause
-6. `coldtype —render climate-crisis` to render each frame in new folder
+6. Hit `a` in the viewer to render each frame in new folder
 7. Navigate into new folder and `convert -loop 4 *.png ice.gif` to create .gif
